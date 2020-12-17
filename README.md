@@ -107,11 +107,13 @@ Cole esse arquivo php dentro de index.php
 
 -# sudo nano /etc/php/7.4/cli/conf.d/mcrypt.ini
 coloque dentro do arquivo.
+
 -# extension=/usr/lib/php/20190902/mcrypt.so
 
 
 -# sudo nano /etc/php/7.4/apache2/conf.d/mcrypt.ini
 coloque dentro do arquivo.
+
 -# extension=/usr/lib/php/20190902/mcrypt.so
 
 
