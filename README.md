@@ -1,5 +1,5 @@
 ## Servidor-AWS
-### Passo a passo para criar um servidor web AWS na amazon
+### Passo a passo para criar um servidor web na amazon AWS
 
 
 ----Instale o Apache------ 
