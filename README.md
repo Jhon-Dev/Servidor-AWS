@@ -34,6 +34,11 @@
 
 Modifique o tamanho padrão de upload, pra não ter problema depois em subir arquivos grandes.
 
+Abra o php.ini 
+
+-# sudo -i
+-# nano /etc/php/7.4/apache2/php.ini
+
 ##### Substitua esses:
 - File_uploads = On
 - max_execution_time = 30
@@ -49,6 +54,9 @@ Modifique o tamanho padrão de upload, pra não ter problema depois em subir arq
 + post_max_size = 32M
 + max_input_time = 60
  +max_input_vars = 4440
+ 
+ De um restart
+ -# sudo systemctl restart apache2
 
 #### Adicione o módulo mcrypt no arquivo de configuração do PHP, edite o arquivo usando o comando:
 
