@@ -47,9 +47,9 @@ Modifique o tamanho padrão de upload, pra não ter problema depois em subir arq
 + max_input_time = 60
  +max_input_vars = 4440
 
-Adicione o módulo mcrypt no arquivo de configuração do PHP, edite o arquivo usando o comando:
--# sudo nano /etc/php/7.4/cli/php.ini
+#### Adicione o módulo mcrypt no arquivo de configuração do PHP, edite o arquivo usando o comando:
 
+-# sudo nano /etc/php/7.4/cli/php.ini
 
 Adicione a seguinte instrução ao arquivo php.ini:
 -# extension=mcrypt.so
@@ -89,7 +89,7 @@ Cole esse arquivo php dentro de index.php
 
 --------------------------------------------------
 
-Instale o Mcrypt no Servidor Apache no Linux
+#### Instale o Mcrypt no Servidor Apache no Linux
 -# sudo apt install php7.4-dev
 
 -# sudo apt-get install php libapache2-mod-php php-mysql php-dev php-pear
