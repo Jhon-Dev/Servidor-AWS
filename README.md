@@ -2,7 +2,7 @@
 ### Passo a passo para criar um servidor web na amazon AWS
 
 
-----Instale o Apache------ 
+#### Instale o Apache
 -# sudo apt-get install apache2
 
 -# sudo apache2ctl configtest
@@ -10,8 +10,9 @@
 -# sudo nano /etc/apache2/apache2.conf
 
 -# sudo apt-get update
+---------------------------------------------
 
-----Instale o PhP------ 
+ #### Instale o PhP
 
 -# sudo add-apt-repository ppa:ondrej/php
 
@@ -26,6 +27,25 @@
 -# sudo pecl install mcrypt-1.0.3
 
 -# php -m | grep mcrypt
+
+---------------------------------------------
+#### Modifique o limite de Upload
+
+Modifique o tamanho padrão de upload, pra não ter problema depois em subir arquivos grandes
+
+- File_uploads = On
+- max_execution_time = 30
+- memory_limit = 128M
+- post_max_size = 8M
+- max_input_time = 60
+-  max_input_vars = 1000
+
++ file_uploads = On
++ max_execution_time = 300
++ memory_limit = 256M
++ post_max_size = 32M
++ max_input_time = 60
+ +max_input_vars = 4440
 
 Adicione o módulo mcrypt no arquivo de configuração do PHP, edite o arquivo usando o comando:
 -# sudo nano /etc/php/7.4/cli/php.ini
