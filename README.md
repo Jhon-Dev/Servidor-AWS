@@ -46,6 +46,8 @@ Abra o php.ini
 - post_max_size = 8M
 - max_input_time = 60
 -  max_input_vars = 1000
+- upload_max_filesize = 2
+
 
 ##### Por esses:
 + file_uploads = On
@@ -53,7 +55,8 @@ Abra o php.ini
 + memory_limit = 256M
 + post_max_size = 32M
 + max_input_time = 60
- +max_input_vars = 4440
++ max_input_vars = 4440
++ upload_max_filesize = 16
  
  De um restart
  -# sudo systemctl restart apache2
