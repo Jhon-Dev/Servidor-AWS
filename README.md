@@ -1,5 +1,5 @@
-## Servidor-AWS
-### Passo a passo para criar um servidor web na amazon AWS
+### Servidor-AWS
+#### Passo a passo para criar um servidor web na amazon AWS
 
 
 #### Instale o Apache
@@ -10,6 +10,7 @@
 -# sudo nano /etc/apache2/apache2.conf
 
 -# sudo apt-get update
+
 ---------------------------------------------
 
  #### Instale o PhP
@@ -31,8 +32,9 @@
 ---------------------------------------------
 #### Modifique o limite de Upload
 
-Modifique o tamanho padrão de upload, pra não ter problema depois em subir arquivos grandes
+Modifique o tamanho padrão de upload, pra não ter problema depois em subir arquivos grandes.
 
+##### Substitua esses:
 - File_uploads = On
 - max_execution_time = 30
 - memory_limit = 128M
@@ -40,6 +42,7 @@ Modifique o tamanho padrão de upload, pra não ter problema depois em subir arq
 - max_input_time = 60
 -  max_input_vars = 1000
 
+##### Por esses:
 + file_uploads = On
 + max_execution_time = 300
 + memory_limit = 256M
@@ -116,37 +119,20 @@ coloque dentro do arquivo.
 
 -# php -m | grep mcrypt
 
-----------------------------------------------
+---------------------------------------------
 
-Atualize o Servidor Linux com o comando:
--# sudo apt-get update
--# sudo apt-get upgrade
-
-Instale o PhpMyAdmin com o seguinte comando:
--# sudo apt-get install phpmyadmin apache2-utils
-
-Veja qual é a versão do PHP:
--# sudo php -v
-
-Insira as configurações do PhpMyAdmin no Apache
--# sudo nano /etc/apache2/apache2.conf
-
-Insira a seguinte linha de comando no arquivo apache2.conf
-Include /etc/phpmyadmin/apache.conf
-
-Reinicie o Apache
--# sudo systemctl restart apache2
-------------------------------------------------
-
- Instalando o PhpMyAdmin
+#### Instalando o PhpMyAdmin
+ 
+ Atualize o Servidor Linux com o comando:
  
 -# sudo apt-get update
 
 -# sudo apt-get upgrade
 
+Instale o PhpMyAdmin com o seguinte comando:
 -# sudo apt-get install phpmyadmin apache2-utils
 
--# php -v	
+-# sudo php -v		
 
 -# sudo apt-get install php-mbstring php7.4-mbstring
 
@@ -154,6 +140,7 @@ Reinicie o Apache
 
 -# clear
 
+Insira as configurações do PhpMyAdmin no Apache
 -# sudo nano /etc/apache2/apache2.conf
 
 Procure por (#Include list of ports to listen on:)
@@ -161,6 +148,8 @@ Procure por (#Include list of ports to listen on:)
 adicione :
 
 #Configurações do PhpMyAdmin
+
+Insira a seguinte linha de comando no arquivo apache2.conf
 Include /etc/phpmyadmin/apache.conf
 
 -# sudo systemctl restart apache2
