@@ -203,6 +203,7 @@ Substitua :
 +DocumentRoot /var/www/meusite.com.br/public_html
 
 -# ls 
+
 Veja se a pasta do seu domínio foi criada
 
 -# sudo a2dissite 000-default
@@ -220,6 +221,7 @@ Veja se a pasta do seu domínio foi criada
 -# sudo chmod -R 777 /var/www/meusite.com.br
 
 -# ls
+
 --------------------------------------------------------------
 
 #### Instalando SSL
@@ -231,6 +233,7 @@ Veja se a pasta do seu domínio foi criada
 -# sudo systemctl reload apache2
 
 -# sudo certbot --apache
+
 --------------------------------------------------------------
 
 #### Configurando UFW Portas
@@ -254,6 +257,7 @@ Veja se a pasta do seu domínio foi criada
 -# sudo ufw status
 
 --------------------------------------------------------------
+
 ####  ordens do Dns AWS    
      
 obs: Essa é a ordem correta Para que o DNS funcione corretamente no seu dominio
