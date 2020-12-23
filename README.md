@@ -171,7 +171,7 @@ Dai você pode acessar o PhpMyAdmin pelo seu Ip/phpmyadmin
 
 -------------------------------------------------------
 
-Configurando sites em um Servidor Apache na AWS
+#### Configurando sites em um Servidor Apache na AWS
 
 -# cd /var
 
@@ -205,6 +205,8 @@ Substitua :
 -# ls 
 Veja se a pasta do seu domínio foi criada
 
+-# sudo a2dissite 000-default
+
 -# sudo a2ensite example.com.br
 
 -# sudo a2enmod rewrite
@@ -219,12 +221,45 @@ Veja se a pasta do seu domínio foi criada
 
 -# ls
 --------------------------------------------------------------
-     ordens do Dns AWS    
+
+#### Instalando SSL
+
+-# cd /var/www/
+
+-# sudo apache2ctl configtest
+
+-# sudo systemctl reload apache2
+
+-# sudo certbot --apache
+--------------------------------------------------------------
+
+#### Configurando UFW Portas
+
+-# sudo ufw enable
+
+-# sudo ufw status
+
+-# sudo ufw allow 'Apache Full'
+
+-# sudo ufw delete allow 'Apache'
+
+-# sudo ufw allow 22
+
+-# sudo ufw allow 80
+
+-# sudo ufw allow 443
+
+-# sudo ufw allow 3306
+
+-# sudo ufw status
+
+--------------------------------------------------------------
+####  ordens do Dns AWS    
      
-     obs: Essa é a ordem correta Para que o DNS funcione corretamente no seu dominio
+obs: Essa é a ordem correta Para que o DNS funcione corretamente no seu dominio
      
-     .net
-     .com
-     .org
-     .uk
+.net
+.com
+.org
+.uk
 	 
