@@ -258,12 +258,4 @@ Veja se a pasta do seu domínio foi criada
 
 --------------------------------------------------------------
 
-####  ordens do Dns AWS    
-     
-obs: Essa é a ordem correta Para que o DNS funcione corretamente no seu dominio
-     
-.net
-.com
-.org
-.uk
 	 
